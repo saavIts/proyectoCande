@@ -1,0 +1,13 @@
+#menu{
+    padding: 0%;
+    background-color: #E7E7E7;
+    font-family: 'Sansita', sans-serif;
+}
+#menu-logo{
+    margin-left: 27%;
+    padding: 10%;
+}
+#navbarSupportedContent{
+    margin-left: 63%;
+    font-size: 110%;
+}

@@ -1,0 +1,101 @@
+<head>
+<!-- texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet">
+ 
+  <!-- subtitulos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- Header-->
+<header class="py-5" id="cont-A">
+  <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder" id="text-1">Nuestros productos</h1>
+          <p class="lead fw-normal  mb-0" id="text-1">Desliza y sumergite en esta tormenta de sabores</p>
+      </div>
+  </div>
+</header>
+
+     <!-- Section-->
+     <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5">
+          <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+              <div class="col mb-5">
+                  <div class="card h-100">
+
+                      <!-- Product image-->
+                      <img class="card-img-top"  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              <!-- Product name-->
+                              <h5 class="fw-bolder">Nombre producto</h5>
+                              <!-- Product price-->
+                              -Categoria -
+                               Descripcion -
+                               Precio -
+                               Stock -
+                          </div>
+                      </div>
+                      <!-- Product actions-->
+
+                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" style="width: fit-content;" id="card">
+                        <div class="text-center" id="card1"><a class="btn btn-outline-dark " href="#">Editar</a></div>
+                        <div class="text-center" id="card1"><a class="btn btn-outline-dark " href="#">Eliminar</a></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <img role="button" src="/../../../assets/TigrisImg/mas.png" alt="" height="70" width="70" id="mas" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">   
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Producto Nuevo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <form [formGroup]='formularioProducto'>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Nombre</label>
+                  <input type="text" class="form-control" id="recipient-name" formControlName='nombre'>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Categoria</label>
+                    <input type="text" class="form-control" id="recipient-name" formControlName='categoria'>
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Descripcion</label>
+                  <textarea class="form-control" id="recipient-name" formControlName='descripcion'></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Precio</label>
+                    <input type="number" class="form-control" id="recipient-name" formControlName='precio'>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Stock</label>
+                    <input type="number" class="form-control" id="recipient-name" formControlName='stock'>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Url img</label>
+                    <input type="text" class="form-control" id="recipient-name"formControlName='url'>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" (click)="guardarProducto()" data-bs-dismiss="modal">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </section>
+</body>
